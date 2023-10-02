@@ -1,34 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![pageform_thumbnail](https://github.com/Kliton/yt_pageform/assets/10452377/610b5935-5afd-4126-9dfd-a7064e18a0db)
 
-## Getting Started
+[Discord server for problems/help](discord.gg/Gc3ShuJrYE)
+[Youtube video](https://youtu.be/GLVbKG-6ies)
+[LIVE DEMO](https://yt-pageform.vercel.app/)
 
-First, run the development server:
+In this 4 hour tutorial we are going to build this full stack PageForm application.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Features: 
+- Responsive
+- Create forms with a stunning drag and drop designer
+- Layout fields: Title, SubTitle, Spacer, Separator, Paragraph
+- Form fields: Text, Number, Select, Date, Checkbox, Textarea
+- Is easy to add and customize new fields
+- Form preview dialog
+- Share form url
+- Form submission/validation
+- Form stats: visits and submissions
