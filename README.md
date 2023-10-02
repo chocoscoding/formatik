@@ -2,7 +2,7 @@
 
 [Discord server for problems/help](https://discord.gg/Gc3ShuJrYE)
 
-[Youtube video](https://youtu.be/GLVbKG-6ies)
+[Youtube video]()
 
 [LIVE DEMO](https://yt-pageform.vercel.app/)
 
