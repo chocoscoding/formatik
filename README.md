@@ -1,6 +1,6 @@
 ![pageform_thumbnail](https://github.com/Kliton/yt_pageform/assets/10452377/610b5935-5afd-4126-9dfd-a7064e18a0db)
 
-[Discord server for problems/help](discord.gg/Gc3ShuJrYE)
+[Discord server for problems/help](https://discord.gg/Gc3ShuJrYE)
 
 [Youtube video](https://youtu.be/GLVbKG-6ies)
 
