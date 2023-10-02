@@ -8,6 +8,15 @@
 
 In this 4 hour tutorial we are going to build this full stack PageForm application.
 
+We are going to build this with:
+- Nextjs 13  with AppRouter
+- Dnd-kit library
+- ServerActions
+- Typescript
+- Tailwindcss / Shadcn UI
+- Vercel PostgreSQL
+- Prisma as ORM
+
 Features: 
 - Responsive
 - Create forms with a stunning drag and drop designer
