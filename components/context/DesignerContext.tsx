@@ -21,6 +21,7 @@ export default function DesignerContextProvider({ children }: { children: ReactN
   const [elements, setElements] = useState<FormElementInstance[]>([]);
   const [selectedElement, setSelectedElement] = useState<FormElementInstance | null>(null);
 
+  //add
   const addElement = (index: number, element: FormElementInstance) => {
     setElements((prev) => {
       const newElements = [...prev];
@@ -29,10 +30,12 @@ export default function DesignerContextProvider({ children }: { children: ReactN
     });
   };
 
+  //remove
   const removeElement = (id: string) => {
     setElements((prev) => prev.filter((element) => element.id !== id));
   };
 
+  //update
   const updateElement = (id: string, element: FormElementInstance) => {
     setElements((prev) => {
       const newElements = [...prev];

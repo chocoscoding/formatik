@@ -33,10 +33,15 @@ function CreateFormBtn() {
       const formId = await CreateForm(values);
       toast({
         title: "Success",
+        className: "bg-green-500",
         description: "Form created successfully",
       });
       router.push(`/builder/${formId}`);
-    } catch (error) {
+    } catch (error: any) {
+      console.log({ error });
+      if (error.message.includes("Name already in use")) {
+        form.setError("name", { message: "name is already in use" });
+      }
       toast({
         title: "Error",
         description: "Something went wrong, please try again later",

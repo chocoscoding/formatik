@@ -36,6 +36,7 @@ function FormBuilder({ form }: { form: Form }) {
 
   const sensors = useSensors(mouseSensor, touchSensor);
 
+  //set elements on rerender
   useEffect(() => {
     if (isReady) return;
     const elements = JSON.parse(form.content);
@@ -53,8 +54,10 @@ function FormBuilder({ form }: { form: Form }) {
     );
   }
 
+  //get link relative to current url
   const shareUrl = `${window.location.origin}/submit/${form.shareURL}`;
 
+  //if the form has already been published
   if (form.published) {
     return (
       <>
@@ -76,6 +79,7 @@ function FormBuilder({ form }: { form: Form }) {
                   navigator.clipboard.writeText(shareUrl);
                   toast({
                     title: "Copied!",
+                    className: "text-green-500",
                     description: "Link copied to clipboard",
                   });
                 }}

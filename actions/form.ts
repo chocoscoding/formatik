@@ -3,9 +3,11 @@
 import prisma from "@/lib/prisma";
 import { formSchema, formSchemaType } from "@/schemas/form";
 import { currentUser } from "@clerk/nextjs";
+import { revalidatePath } from "next/cache";
 
 class UserNotFoundErr extends Error {}
 
+//get for stats
 export async function GetFormStats() {
   const user = await currentUser();
   if (!user) {
@@ -41,34 +43,44 @@ export async function GetFormStats() {
   };
 }
 
+//crete the form
 export async function CreateForm(data: formSchemaType) {
-  const validation = formSchema.safeParse(data);
-  if (!validation.success) {
-    throw new Error("form not valid");
-  }
+  try {
+    const validation = formSchema.safeParse(data);
+    if (!validation.success) {
+      throw new Error("form not valid");
+    }
 
-  const user = await currentUser();
-  if (!user) {
-    throw new UserNotFoundErr();
-  }
+    const user = await currentUser();
+    if (!user) {
+      throw new UserNotFoundErr();
+    }
 
-  const { name, description } = data;
+    const { name, description } = data;
 
-  const form = await prisma.form.create({
-    data: {
-      userId: user.id,
-      name,
-      description,
-    },
-  });
+    const form = await prisma.form.create({
+      data: {
+        userId: user.id,
+        name,
+        description,
+      },
+    });
 
-  if (!form) {
+    if (!form) {
+      throw new Error("something went wrong");
+    }
+    revalidatePath("/");
+    return form.id;
+  } catch (error: any) {
+//if the user creates a duplicate name
+    if (error.message.includes("Unique constraint failed on the fields")) {
+      throw new Error("Name already in use");
+    }
     throw new Error("something went wrong");
   }
-
-  return form.id;
 }
 
+//get forms
 export async function GetForms() {
   const user = await currentUser();
   if (!user) {
@@ -85,6 +97,8 @@ export async function GetForms() {
   });
 }
 
+
+//get one form
 export async function GetFormById(id: number) {
   const user = await currentUser();
   if (!user) {
