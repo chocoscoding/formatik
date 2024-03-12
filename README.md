@@ -50,3 +50,14 @@ Enjoy here 👉 [Link to site](https://formatik.vercel.app)
 👉 **Submission Validation**: Ensure data accuracy with built-in form submission validation, minimizing errors and ensuring the quality of collected information.
 
 👉 **Comprehensive Stats**: Track form performance with detailed statistics including the number of visits and submissions, providing valuable insights for optimization and analysis.
+
+
+
+## <a name="qucik-start">🏃💨 Quick Start</a>
+- Sign up at the site [Mood Journal with AI](https://formatik.vercel.app/)
+- Create an account or use a demo account with: 
+```
+mail: test@email.com
+password: test123
+```
+- enjoyy!!!!!
