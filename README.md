@@ -54,7 +54,7 @@ Enjoy here 👉 [Link to site](https://formatik.vercel.app)
 
 
 ## <a name="qucik-start">🏃💨 Quick Start</a>
-- Sign up at the site [Mood Journal with AI](https://formatik.vercel.app/)
+- Sign up at the site [Formatik site](https://formatik.vercel.app/)
 - Create an account or use a demo account with: 
 ```
 mail: test@email.com
